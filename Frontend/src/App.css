@@ -1,0 +1,1088 @@
+/* 🌙 Global Dark Full Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left, #0a0a0a, #000);
+  color: #f2f2f2;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 🧭 Full Width App */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 🚀 Header — Compact & Stylish */
+.header {
+  text-align: center;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #5e17eb, #a21caf);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(162, 28, 175, 0.3);
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.header:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px rgba(162, 28, 175, 0.5);
+}
+
+/* 🧾 Add Course Form */
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.add-form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.7rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #121212;
+  color: white;
+  transition: 0.3s;
+}
+
+.add-form input:focus {
+  outline: none;
+  border-color: #a21caf;
+  box-shadow: 0 0 10px #a21caf;
+}
+
+.add-form button {
+  background: linear-gradient(135deg, #a21caf, #5e17eb);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+}
+
+/* 📘 Course List Section */
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* 🎓 Course Card */
+.course-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.course-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(162, 28, 175, 0.3);
+}
+
+/* 🧰 Buttons inside course card */
+.course-item button {
+  background: linear-gradient(135deg, #7c3aed, #a21caf);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.course-item button:hover {
+  background: linear-gradient(135deg, #a855f7, #c084fc);
+  transform: scale(1.05);
+}
+
+/* ✏️ Input inside course card */
+.course-item input {
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, #0a0a0a, #000);
+  font-family: "Poppins", sans-serif;
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+#root, .app-container {
+  width: 100%;
+  height: 100vh;  /* Full laptop screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+} 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  /* dark overlay + background image */
+  background:
+    linear-gradient(rgba(6,6,8,0.65), rgba(6,6,8,0.65)), /* dark overlay to keep text readable */
+    url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1650&q=80") no-repeat center center fixed;
+  background-size: cover;           /* cover entire viewport */
+  background-position: center center;
+  background-attachment: fixed;     /* stays fixed while scrolling */
+  color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+
+/* If you want the image only inside app container instead of whole page: */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  /* Optional slightly stronger overlay for cards on top */
+  background:
+    linear-gradient(rgba(8,7,10,0.6), rgba(8,7,10,0.6)),
+    url("https://plus.unsplash.com/premium_photo-1681400019731-5d7cc4cafb9d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074") no-repeat center center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+/* Home.css */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  /* Optional slightly stronger overlay for cards on top */
+  background:
+    linear-gradient(rgba(8,7,10,0.6), rgba(8,7,10,0.6)),
+    url("https://plus.unsplash.com/premium_photo-1681400019731-5d7cc4cafb9d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074") no-repeat center center;
+  background-size: cover;
+  border-radius: 8px;
+
+}
+
+.home-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 50px 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  width: 400px;
+}
+
+.home-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #c5b3ff;
+  letter-spacing: 1px;
+}
+
+.home-container p {
+  color: #aaa;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-buttons button {
+  background: linear-gradient(90deg, #8a2be2, #6a0dad);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-buttons button:hover {
+  background: linear-gradient(90deg, #a855f7, #7b2cbf);
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+
+/* Dark stylish card layout */
+
+.courses-container {
+  width: 70%;
+  padding: 40px 60px;
+  background: linear-gradient(135deg, #1a1a2e, #2a2a4a);
+  min-height: auto;       /* height auto-grow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* center alignment */
+  box-sizing: border-box;
+}
+
+
+.courses-container h2 {
+  font-size: 2rem;
+  color: #b693ff;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.course-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 25px 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(138, 43, 226, 0.5);
+  border-color: rgba(138, 43, 226, 0.4);
+}
+
+.course-card h3 {
+  color: #cbb7ff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+.course-card .description {
+  margin-top: 8px;
+  color: #b3b3ff;
+  font-style: italic;
+}
+
+.enroll-btn {
+  margin-top: 15px;
+  width: 100%;
+  background: linear-gradient(90deg, #8a2be2, #6a0dad);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enroll-btn:hover {
+  background: linear-gradient(90deg, #a855f7, #7b2cbf);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
+
+.no-course {
+  color: #aaa;
+  font-size: 1.1rem;
+}
+/* ===== Login Box Container ===== */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 35px 30px;
+  border-radius: 16px;
+  background: #e8f0fe; /* soft light blue */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Title ===== */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1a237e;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Form ===== */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Input Fields ===== */
+.login-container input {
+  margin-bottom: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #c5cae9;
+  outline: none;
+  background: #f4f6fc;
+  color: #333;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #3f51b5;
+}
+
+/* ===== Button ===== */
+.login-container button {
+  background-color: #3f51b5; /* soft indigo */
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+  background-color: #283593;
+  transform: translateY(-1px);
+}
+
+/* ===== Extra Text ===== */
+.login-container p {
+  margin-top: 15px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
+
+.login-container a {
+  color: #3f51b5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+/* --- Global & Container Styling --- */
+
+/* Body/Background Theme: Soft Lavender Background */
+body {
+  background-color: #e5ccff; 
+  font-family: 'Poppins', sans-serif; 
+  padding: 40px; /* Slightly more padding */
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* CourseList container: Centered and spacious */
+.course-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; 
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* --- Individual Course Card Styling: Crystal Clean Depth --- */
+
+.course-card {
+  background-color: #ffffff; 
+  color: #1f1035; /* Darkest purple text for maximum clarity */
+  border-radius: 20px; 
+  padding: 30px; 
+  width: 350px; /* Slightly wider card */
+  max-width: 100%;
+  
+  /* Crystal-like shadow effect */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.5); 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+}
+
+/* Card Hover Effect: Deep Lift and Strong Purple Glow */
+.course-card:hover {
+  transform: translateY(-12px); /* Deeper lift */
+  /* Strong, vibrant purple shadow glow */
+  box-shadow: 0 25px 50px rgba(125, 68, 192, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  /* The border accent now uses the primary purple */
+  border-bottom: 5px solid #7d44c0; 
+}
+
+/* Course Title: High-Impact Typography */
+.course-card h3 {
+  color: #7d44c0; 
+  margin: 0;
+  font-size: 28px; /* Largest title size */
+  font-weight: 900; /* Max boldness */
+  text-transform: uppercase; /* More impactful */
+  letter-spacing: 0.5px; /* Slight positive spacing */
+  
+  /* Separator: Thicker and clean */
+  border-bottom: 3px solid #f0e6ff; /* Background color for soft separator */
+  padding-bottom: 10px;
+}
+
+/* Course Description/Details: Enhanced Readability with Muted Tone */
+.course-card p {
+  margin: 0;
+  font-size: 16px; 
+  color: #554070; 
+  line-height: 1.8; /* Maximum line height for reading comfort */
+}
+
+/* --- Buttons and Actions Styling: Pure Purple Contrast --- */
+
+/* Edit & Delete buttons container */
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px; /* Better separation */
+  margin-top: auto;
+  padding-top: 20px; /* More space above buttons */
+}
+
+/* Button common styling: Clean, rounded, highly interactive */
+.btn-course {
+  padding: 12px 24px; /* Larger hit area */
+  border-radius: 10px; 
+  border: none;
+  cursor: pointer;
+  font-weight: 700; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  color: #ffffff;
+  /* Strong shadow for a tactile feel */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Edit button: Primary Action Purple (Vibrant) */
+.btn-edit {
+  background-color: #8a2be2; /* Blue Violet - High Energy Purple */
+}
+
+.btn-edit:hover {
+  background-color: #7124c0; 
+  /* Deeper lift and strong shadow */
+  transform: translateY(-4px); 
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.7); 
+}
+
+/* Delete button: Secondary Action Purple (Darker Contrast) */
+.btn-delete {
+  background-color: #5d3f7f; /* Rich, darker purple/indigo for contrast */
+}
+
+.btn-delete:hover {
+  background-color: #4b326d;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(93, 63, 127, 0.7); 
+}
+
+/* No courses message */
+.no-courses {
+  color: #7d44c0;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 24px; /* Larger message */
+  padding: 30px;
+  border: 4px dashed #7d44c0;
+  border-radius: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(125, 68, 192, 0.15);
+}
+/* --- Form Container Styling --- */
+
+.add-course-form {
+  /* Form container should stand out against the background */
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px; /* Controlled width for better design */
+  margin: 40px auto; /* Centered with top/bottom spacing */
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between form elements */
+  
+  /* Soft shadow matching the card style */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  border-top: 5px solid #8a2be2; /* Top accent line */
+}
+
+/* --- Input Field Styling --- */
+
+.input-field {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  
+  /* Soft, elevated look */
+  background-color: #f7f0ff; /* Very light purple/off-white background */
+  border: 1px solid #d5c3f0; /* Subtle light purple border */
+  color: #3f1e63; /* Dark purple text color */
+  
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Placeholder text color */
+.input-field::placeholder {
+  color: #a092b3; /* Muted purple placeholder */
+  font-weight: 400;
+}
+
+/* Input Focus Effect: The defining professional touch */
+.input-field:focus {
+  outline: none; /* Remove default outline */
+  border-color: #8a2be2; /* Vibrant purple border on focus */
+  /* Stronger shadow (glow) on focus */
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3), 0 0 8px rgba(138, 43, 226, 0.2); 
+  background-color: #ffffff; /* White background when focused */
+}
+
+/* --- Add Button Styling --- */
+
+.btn-add {
+  /* Using the primary accent purple from the course cards */
+  background-color: #8a2be2; 
+  color: #ffffff;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  /* Tactile shadow */
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+  
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+/* Button Hover/Active State */
+.btn-add:hover {
+  background-color: #7124c0;
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
+}
+
+.btn-add:active {
+  transform: translateY(0); /* Press down effect */
+  box-shadow: 0 3px 8px rgba(138, 43, 226, 0.4);
+}
+/* --- Global & Theme Setup (Unchanged but validated) --- */
+
+/* Body/Background Theme: Soft Lavender Background */
+body {
+  background-color: #e5ccff; /* Light, elegant lavender/mauve background */
+  font-family: 'Poppins', sans-serif; /* High-quality modern font */
+  padding: 40px; 
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* --- Course List Layout (Grid for 3 Columns) --- */
+
+.course-list-container {
+  display: grid;
+  /* Ensures 3 cards fit max (min 350px wide), and they are fully responsive */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 40px; /* Generous spacing */
+  max-width: 1200px; /* Container width limit */
+  margin: 40px auto; /* Centered with vertical spacing */
+  padding: 0;
+}
+
+/* --- Individual Course Card Styling: Premium Crystal Clean --- */
+
+.course-card {
+  background-color: #ffffff; 
+  color: #1f1035; /* Darkest text for readability */
+  border-radius: 20px; 
+  padding: 30px; 
+  max-width: 100%; /* Allows grid to control width */
+  
+  /* Deep, defined shadow for an "elevated" look */
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.6); 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  
+  /* Smooth transition for hover effect */
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s;
+}
+
+/* Card Hover Effect: Strong visual feedback */
+.course-card:hover {
+  transform: translateY(-15px); /* Stronger lift */
+  /* Intense purple glow + accent border */
+  box-shadow: 
+    0 30px 60px rgba(125, 68, 192, 0.7), 
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+  border-bottom: 7px solid #8a2be2; /* Thicker, defined accent border */
+}
+
+/* Course Title: High-Impact Typography */
+.course-card h3 {
+  color: #7d44c0; 
+  margin: 0;
+  font-size: 28px; 
+  font-weight: 900; 
+  text-transform: uppercase;
+  letter-spacing: 0.5px; 
+  
+  /* Separator: Clean, subtle line */
+  border-bottom: 3px solid #f0e6ff; 
+  padding-bottom: 10px;
+}
+
+/* Course Description/Details: Enhanced Readability */
+.course-card p {
+  margin: 0;
+  font-size: 16px; 
+  color: #554070; 
+  line-height: 1.8; 
+}
+
+/* --- Buttons and Actions Styling: Cohesive and Interactive --- */
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px; 
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.btn-course {
+  padding: 12px 24px; 
+  border-radius: 10px; 
+  border: none;
+  cursor: pointer;
+  font-weight: 700; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease-out;
+  color: #ffffff;
+  /* Standard button shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Edit button: Primary Action Purple */
+.btn-edit {
+  background-color: #8a2be2; 
+}
+
+.btn-edit:hover {
+  background-color: #7124c0; 
+  transform: translateY(-4px); 
+  /* Stronger hover shadow */
+  box-shadow: 0 12px 25px rgba(138, 43, 226, 0.75); 
+}
+
+/* Delete button: Secondary Action Purple (Darker Contrast) */
+.btn-delete {
+  background-color: #5d3f7f; 
+}
+
+.btn-delete:hover {
+  background-color: #4b326d;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(93, 63, 127, 0.75); 
+}
+
+/* No courses message (Unchanged but validated) */
+.no-courses {
+  color: #7d44c0;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 24px;
+  padding: 30px;
+  border: 4px dashed #7d44c0;
+  border-radius: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(125, 68, 192, 0.15);
+}
+
+/* --- Form Container Styling (MATCHING THEME) --- */
+
+.add-course-form {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 35px; /* More padding */
+  width: 100%;
+  max-width: 450px; 
+  margin: 40px auto; 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  border-top: 8px solid #8a2be2; /* Stronger top accent line */
+}
+
+/* --- Input Field Styling --- */
+
+.input-field {
+  width: 100%;
+  padding: 15px 20px; /* Larger input area */
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  
+  background-color: #f7f0ff; 
+  border: 1px solid #d5c3f0; 
+  color: #3f1e63; 
+  
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: #a092b3; 
+}
+
+/* Input Focus Effect */
+.input-field:focus {
+  outline: none; 
+  border-color: #8a2be2; 
+  /* Defined focus glow */
+  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.2), 0 0 8px rgba(138, 43, 226, 0.1); 
+  background-color: #ffffff; 
+}
+
+/* --- Add Button Styling (Matching Edit/Delete) --- */
+
+.btn-add {
+  background-color: #8a2be2; 
+  color: #ffffff;
+  padding: 15px 20px; /* Larger button */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+  
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-add:hover {
+  background-color: #7124c0;
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.6);
+}
+
+.btn-add:active {
+  transform: translateY(0); 
+  box-shadow: 0 3px 8px rgba(138, 43, 226, 0.4);
+}
+/* --- Course List Container (Replaced with Grid) --- */
+.course-list {
+  /* Use grid layout to arrange items in rows and columns */
+  display: grid;
+  /* Auto-fit and minmax ensures 3 cards fit max (min 350px wide) */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 40px; /* Generous spacing between cards */
+  max-width: 1200px; /* Optional: Sets a maximum width for the whole list */
+  margin: 40px auto; /* Centers the list block */
+  padding: 0 20px; /* Padding for small screens */
+}
+
+/* --- Course Card Adjustments (Ensure Grid Control) --- */
+.course-card {
+  /* ... (other card styles like background, border-radius, padding remain the same) ... */
+  
+  /* **CRITICAL CHANGE:** Remove fixed width so the grid can manage column width */
+  width: auto; /* Ensure no fixed width interferes */
+  max-width: 100%; /* Ensure responsiveness */
+
+  /* Set card to fill grid cell space */
+  height: 100%; 
+  
+  /* Ensure content spacing within card is managed */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  /* ... (rest of the card styles remain the same) ... */
+}/* Base Grid for large screens (1200px max-width container) */
+.course-list {
+  display: grid;
+  /* Max 3 cards, each min 350px wide */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 40px; 
+  max-width: 1200px;
+  margin: 40px auto; 
+}@media (max-width: 992px) {
+  /* Course list container: Adjust grid for two columns */
+  .course-list {
+    /* Ensures two columns fit well, with a slightly smaller min-width */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    max-width: 95%; /* Use almost full width */
+    padding: 0 15px;
+  }
+  
+  /* Course Card: Slightly reduce padding */
+  .course-card {
+    padding: 25px;
+    gap: 15px;
+  }
+  
+  /* Course Title: Slightly smaller font */
+  .course-card h3 {
+    font-size: 24px;
+  }
+}@media (max-width: 600px) {
+  /* Body: Reduce padding on small screens */
+  body {
+    padding: 20px 10px;
+  }
+  
+  /* Course list container: Single column layout */
+  .course-list {
+    /* Forces single column, allowing cards to stretch */
+    grid-template-columns: 1fr; 
+    gap: 25px;
+    margin-top: 20px;
+  }
+
+  /* Form: Reduce padding and make it full width */
+  .add-course-form {
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 95%;
+  }
+
+  /* Buttons: Make button text slightly smaller */
+  .btn-course, .btn-add {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+  
+  /* No Courses Message: Adjust size */
+  .no-courses {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+.title {
+  color: #884ecb;       /* Deep purple text */
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline highlight effect */
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #b97fff, #884ecb);
+  border-radius: 4px;
+}
+
+/* --- Course Grid Layout (Horizontal 3-Column) --- */
+.courses-container {
+  /* Set max width to control the grid size */
+  max-width: 1200px; 
+  margin: 40px auto; 
+  padding: 0 20px;
+}
+
+.courses-grid {
+  display: grid;
+  /* Auto-fit and minmax ensures 3 cards fit max, each min 350px wide */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 30px;
+  justify-items: center; /* Center items if less than 3 fit */
+}
+
+/* --- Course Card Styling (Normal Width) --- */
+.course-card {
+  /* Enforce a normal width, matching a standard card size */
+  width: 350px; 
+  max-width: 100%;
+  height: 100%; /* Ensures uniform height in a row */
+  padding: 30px; 
+  
+  /* Standard visual styling (example values) */
+  background-color: #ffffff; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* --- Card Content and Typography --- */
+
+.course-card h3 {
+  color: #333; 
+  font-size: 20px; 
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.course-card p {
+  color: #555;
+  margin: 0;
+  font-size: 15px;
+}
+
+.course-card strong {
+  font-weight: 600;
+  color: #222;
+}
+
+/* --- Description Handling (Since it's in JSX, we style it to be minimal) --- */
+.course-card .description {
+    /* If you don't want to see the description, you can hide it */
+    /* display: none; */ 
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* --- Button Styling --- */
+
+.enroll-btn {
+  margin-top: auto; /* Pushes button to the bottom */
+  background-color: #007bff; /* Primary Blue Example */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.enroll-btn:hover {
+  background-color: #0056b3;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 992px) {
+  .courses-grid {
+    /* Tablet: Allows two columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .courses-grid {
+    /* Mobile: Single column */
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  
+  .course-card {
+    /* Allows the card to stretch fully on small screens */
+    width: 100%;
+    padding: 20px;
+  }
+}
